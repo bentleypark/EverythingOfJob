@@ -72,6 +72,9 @@ android {
 }
 
 dependencies {
+    implementation project(Modules.commonUi)
+    implementation project(Modules.commonUtils)
+    implementation project(Modules.data)
 
     implementation Libs.kotlinStdLib
     implementation Libs.coroutineCore

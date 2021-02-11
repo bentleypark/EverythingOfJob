@@ -22,6 +22,8 @@ object JobSiteList {
         JobSiteItem("메디잡", "#방송 #언론", R.drawable.medijob, "https://www.mediajob.co.kr/"),
         JobSiteItem("알바몬", "#알바", R.drawable.albamon, "https://www.albamon.com/"),
         JobSiteItem("알바천국", "#알바", R.drawable.alba, "http://www.alba.co.kr/"),
+        JobSiteItem("크몽", "#프리랜서", R.drawable.kmong, "https://kmong.com/"),
+        JobSiteItem("숨고", "#프리랜서", R.drawable.soomgo, "https://soomgo.com/"),
     )
 
     private val list2 = listOf(
@@ -29,7 +31,8 @@ object JobSiteList {
         JobSiteItem("잡플래닛", "#기업정보 #연봉", R.drawable.jobplanet, "https://www.jobplanet.co.kr/"),
         JobSiteItem("블라인드", "#기업정보 #익명커뮤니티", R.drawable.blind, "https://www.teamblind.com/kr/"),
         JobSiteItem("링크드인", "#글로벌 #네트워크", R.drawable.linkedin, "https://www.linkedin.com/"),
-        JobSiteItem("리멤버 커리어", "#명함 #커뮤니티", R.drawable.remember, "https://career.rememberapp.co.kr/"),
+        JobSiteItem("리멤버 커리어", "#명함 #경력직", R.drawable.remember, "https://career.rememberapp.co.kr/"),
+        JobSiteItem("학생독립만세", "#후불제 #취업교육", R.drawable.hakdokman, "https://www.hakdokman.com/"),
         JobSiteItem("코멘토", "#멘토링", R.drawable.comento, "https://comento.kr/"),
         JobSiteItem("자소설닷컴", "#이력서 #자소서", R.drawable.jasoseol, "https://jasoseol.com/"),
         JobSiteItem("독취사", "#커뮤니티 #다음카페", R.drawable.daumcafe, "https://m.cafe.daum.net/breakjob/"),

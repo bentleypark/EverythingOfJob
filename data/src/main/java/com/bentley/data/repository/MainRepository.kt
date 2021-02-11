@@ -2,7 +2,6 @@ package com.bentley.data.repository
 
 import com.bentley.data.state.DataState
 import com.project.noticeme.data.room.*
-import io.sentry.Sentry
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -27,7 +26,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -41,7 +40,7 @@ constructor(
                 emit(DataState.Success(resultList))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -56,7 +55,7 @@ constructor(
                 emit(DataState.Success(result))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -69,7 +68,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -82,7 +81,7 @@ constructor(
                 emit(DataState.Success(resultList))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -94,7 +93,7 @@ constructor(
                 emit(resultList)
             } catch (e: Exception) {
                 Timber.e(e)
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -107,7 +106,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -132,7 +131,7 @@ constructor(
                 emit(DataState.Success(resultList))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -145,7 +144,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -159,7 +158,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -173,7 +172,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -186,7 +185,7 @@ constructor(
                 emit(DataState.Success(resultList))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -199,7 +198,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 
@@ -212,7 +211,7 @@ constructor(
                 emit(DataState.Success(true))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-                Sentry.captureException(java.lang.Exception("Exception - $e"))
+//                Sentry.captureException(java.lang.Exception("Exception - $e"))
             }
         }
 

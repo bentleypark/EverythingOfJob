@@ -8,7 +8,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bentley.common.ex.viewBinding
 import com.bentley.everythingofjob.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by viewBinding(ActivityMainBinding::inflate)
 
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             // menu should be considered as top level destinations.
             val appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
-            setupActionBarWithNavController(navController, appBarConfiguration)
+//            setupActionBarWithNavController(navController, appBarConfiguration)
             binding.navView.setupWithNavController(navController)
         }
     }

@@ -48,6 +48,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
     lintOptions {
         abortOnError false
         disable 'UnsafeExperimentalUsageError', 'UnsafeExperimentalUsageWarning', 'ContentDescription'
@@ -119,10 +123,7 @@ dependencies {
     implementation Libs.timber
     implementation Libs.stetho
     implementation Libs.stethoOkhttp3
-    implementation Libs.sentry
-
-    implementation Libs.admob
-    implementation Libs.playCoreKtx
+//    implementation Libs.sentry
 
     implementation Libs.coil
 }
@@ -143,9 +144,9 @@ dependencyUpdates {
     }
 }
 
-sentry {
-    autoProguardConfig false
-    autoUpload false
-    uploadNativeSymbols false
-    includeNativeSources false
-}
+//sentry {
+//    autoProguardConfig false
+//    autoUpload false
+//    uploadNativeSymbols false
+//    includeNativeSources false
+//}

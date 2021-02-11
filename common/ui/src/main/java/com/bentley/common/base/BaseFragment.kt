@@ -1,6 +1,7 @@
 package com.bentley.common.base
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
@@ -25,5 +26,12 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
         })
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupView()
+    }
+
     abstract fun setUpObserve(viewLifecycleOwner: LifecycleOwner)
+
+    abstract fun setupView()
 }

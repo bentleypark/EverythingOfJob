@@ -1,23 +1,23 @@
-package com.bentley.everythingofjob.ui.home
+package com.bentley.everythingofjob.ui.service
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bentley.common.base.BaseFragment
 import com.bentley.common.ex.runLayoutAnimation
-import com.bentley.everythingofjob.databinding.FragmentHomeBinding
+import com.bentley.everythingofjob.databinding.FragmentServiceBinding
+import com.bentley.everythingofjob.ui.home.JobSiteList
+import com.bentley.everythingofjob.ui.home.JobSiteListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+class ServiceFragment : BaseFragment<FragmentServiceBinding>() {
 
-    private val homeViewModel: HomeViewModel by viewModels()
     private val listAdapter: JobSiteListAdapter by lazy {
-        JobSiteListAdapter(JobSiteList.fetchJobSiteData().toMutableList())
+        JobSiteListAdapter(JobSiteList.fetchServiceData().toMutableList())
     }
 
     override fun onCreateView(
@@ -25,17 +25,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentServiceBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun setUpObserve(viewLifecycleOwner: LifecycleOwner) {
-        homeViewModel.apply {
-
-            text.observe(viewLifecycleOwner, {
-
-            })
-        }
     }
 
     override fun setupView() {

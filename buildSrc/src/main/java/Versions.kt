@@ -11,7 +11,7 @@ object Versions {
     const val navSafArgPluginVersion = "2.3.2"
 
     // Kotlin
-    const val kotlinVersion = "1.4.30"
+    const val kotlinVersion = "1.4.31"
 
     // Coroutines
     const val androidVersion = "1.4.2"
@@ -36,7 +36,7 @@ object Versions {
 
     // Jetpack
     const val workVersion = "2.4.0"
-    const val lifeCycleVersion = "2.2.0"
+    const val lifeCycleVersion = "2.3.0"
     const val roomVersion = "2.2.6"
     const val navigationVersion = "2.3.3"
     const val startupVersion = "1.0.0"

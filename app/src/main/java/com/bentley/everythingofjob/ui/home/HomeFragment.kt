@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bentley.common.base.BaseFragment
 import com.bentley.common.ex.runLayoutAnimation
 import com.bentley.everythingofjob.databinding.FragmentHomeBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,6 +20,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private val listAdapter: JobSiteListAdapter by lazy {
         JobSiteListAdapter(JobSiteList.fetchJobSiteData().toMutableList())
     }
+    private val filterBottomSheetFragment = FilterBottomSheetFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,6 +49,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                 setHasFixedSize(true)
                 runLayoutAnimation()
+            }
+
+
+            btnFilter.setOnClickListener {
+                parentFragment?.let { it -> filterBottomSheetFragment.show(it.requireFragmentManager(),"") }
             }
         }
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,27 +11,39 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/fragment_home_title_margin_horizontal"
         android:layout_marginTop="@dimen/fragment_home_title_margin_vertical"
-        android:text="@string/app_name"
+        android:text="채용사이트"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_filter"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/gray"
+        android:text="All"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/ic_arrow_down"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/white" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_job_site_list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="40dp"
         android:overScrollMode="never"
         android:scrollbarSize="2dp"
         android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
         tools:listitem="@layout/item_job_site_list" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
